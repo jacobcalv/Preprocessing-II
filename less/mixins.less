@@ -1,11 +1,14 @@
 // Mixins in here
-.buttons-pmix(@width, @height, @padding, @color, @b-color, @font-size){
+.buttons-pmix(@color, @b-color, @font-size){
     text-align: center;
     border-radius: 12px;
-    width: @width;
-    height: @height;
-    padding: @padding;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 83%;
     color: @color;
     background-color: @b-color;
     font-size: @font-size;
+    @media @mobile {
+        width: 100%;
+    }
 }
