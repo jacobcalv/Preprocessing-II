@@ -1,24 +1,70 @@
-.home {
+header {
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    margin-left: 18%;
+    margin-right:  18%;
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    img {
+      margin-bottom: 3%;
+    }
+    .welcome-text {
+      padding-bottom: 2%;
+      border-bottom: 3px dotted grey;
+    }
+  }
+  
+}
 
+.home {
+  @media @mobile {
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      width: 100%;
+      margin: 0;
+    }
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 90%;
+        padding-top: 20px;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        width: 90%;
+        padding: 0;
+      }
 
       img {
         border-radius: 10px;
+        @media @mobile {
+          width: 100%;
+        
+        }
       }
     }
   }
@@ -26,10 +72,18 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobile {
+        order: -1;
+        padding-top: 20px;
+      }
     }
 
     .img-content {
@@ -41,6 +95,12 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      width: 90%;
+      margin: 0;
+      padding-top: 15px;
+      padding-bottom: 20px;
+    }
 
     img {
       border-radius: 10px;
@@ -52,10 +112,21 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 70%;
+        margin-left: 10%;
+      }
+      .btn{
+        .buttons-pmix(white, @button-bg, 16px)
+      }
     }
   }
-}// home
+} // home
